@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ma_voix_app/counter/business/blocProvider.dart';
-import 'package:ma_voix_app/counter/business/Increment.dart';
+import 'package:ma_voix_app/counter/business/increment.dart';
 
 class Counter extends StatelessWidget {
   @override
