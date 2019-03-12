@@ -1,5 +1,7 @@
 import 'dart:async';
+
 import 'package:ma_voix_app/counter/business/blocProvider.dart';
+import 'package:rxdart/rxdart.dart';
 
 class Increment implements BlocBase {
   int _counter;
@@ -7,15 +9,15 @@ class Increment implements BlocBase {
   //
   // Stream to handle the counter
   //
-  StreamController<int> _counterController = StreamController<int>();
-  StreamSink<int> get _inAdd => _counterController.sink;
+  BehaviorSubject<int> _counterController = BehaviorSubject<int>();
+  Sink<int> get _inAdd => _counterController.sink;
   Stream<int> get getCounter => _counterController.stream;
 
   //
   // Stream to handle the action on the counter
   //
-  StreamController _actionController = StreamController();
-  StreamSink get _incrementCounter => _actionController.sink;
+  BehaviorSubject _actionController = BehaviorSubject();
+  Sink get _incrementCounter => _actionController.sink;
 
   //
   // Constructor
