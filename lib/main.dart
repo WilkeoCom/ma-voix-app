@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ma_voix_app/counter/business/blocProvider.dart';
-import 'package:ma_voix_app/counter/business/increment.dart';
+import 'package:ma_voix_app/bloc_helpers/blocProvider.dart';
+import 'package:ma_voix_app/counter/blocs/incrementBloc.dart';
 import 'package:ma_voix_app/counter/widgets/counter.dart';
 
 void main() => runApp(MyApp());
@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BlocProvider<Increment>(
-        bloc: Increment(),
+      home: BlocProvider<IncrementBloc>(
+        bloc: IncrementBloc(),
         child: Counter(),
       ),
     );
