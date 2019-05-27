@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ma_voix_app/projects/models/project.dart';
+import 'package:ma_voix_app/projects/widgets/projects_list_item.dart';
 
 class ProjectsList extends StatelessWidget {
   final List<Project> projects = [
@@ -15,9 +16,16 @@ class ProjectsList extends StatelessWidget {
         image: 'https://img.icons8.com/metro/420/ground-transportation.png')
   ];
 
-  Widget buildProjectItem(BuildContext context, int index) {
-    Project project = projects[index];
+  Widget getListItem(Project project) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      child: SizedBox(
+        height: 100,
+        child: new ProjectsListItem(project: project),
+      ),
+    );
 
+    /*
     return new ListTile(
       leading: new Hero(
         tag: index,
@@ -28,13 +36,15 @@ class ProjectsList extends StatelessWidget {
       title: new Text(project.title),
       subtitle: new Text(project.topics),
     );
+    */
   }
 
   @override
   Widget build(BuildContext context) {
-    return new ListView.builder(
-      itemCount: projects.length,
-      itemBuilder: buildProjectItem,
+    return new ListView(
+      padding: const EdgeInsets.all(10.0),
+      children:
+          projects.map<Widget>((project) => getListItem(project)).toList(),
     );
   }
 }
