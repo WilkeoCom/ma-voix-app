@@ -34,8 +34,9 @@ class Chart extends StatelessWidget {
   /// Create one series with sample hard coded data.
   static List<charts.Series<LinearPolls, String>> _createSampleData() {
     final data = [
-      new LinearPolls('Pour', 70),
-      new LinearPolls('Contre', 30),
+      new LinearPolls('Pour', 53),
+      new LinearPolls('Mitigé', 22),
+      new LinearPolls('Contre', 25),
     ];
 
     return [
