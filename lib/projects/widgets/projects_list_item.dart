@@ -15,7 +15,7 @@ class ProjectsListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(crossAxisAlignment: CrossAxisAlignment.start, children: <Widget>[
-      new Chart(),
+      Chart.withSampleData(),
       new ProjectResume(project: project),
     ]);
   }
