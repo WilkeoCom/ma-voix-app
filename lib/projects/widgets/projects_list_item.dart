@@ -18,11 +18,13 @@ class ProjectsListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     var projectInfo = Expanded(
       flex: 1,
-      child:
-          Row(crossAxisAlignment: CrossAxisAlignment.start, children: <Widget>[
-        Chart.withSampleData(),
-        new ProjectResume(project: project),
-      ]),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Chart.withSampleData(),
+          new ProjectResume(project: project),
+        ],
+      ),
     );
     var voteButtons = Expanded(
       flex: 1,
