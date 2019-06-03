@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class VoteButton extends StatelessWidget {
-  final IconData icon;
   final Color backgroundColor;
+  final IconData icon;
 
   const VoteButton({Key key, this.icon, this.backgroundColor})
       : super(key: key);
