@@ -34,17 +34,19 @@ class Chart extends StatelessWidget {
   /// Create one series with sample hard coded data.
   static List<charts.Series<LinearPolls, String>> _createSampleData() {
     final data = [
-      new LinearPolls('Pour', 53),
-      new LinearPolls('Mitigé', 22),
-      new LinearPolls('Contre', 25),
+      new LinearPolls('Contre', 25, charts.MaterialPalette.red.shadeDefault),
+      new LinearPolls(
+          'Mitigé', 22, charts.MaterialPalette.deepOrange.shadeDefault),
+      new LinearPolls('Pour', 53, charts.MaterialPalette.blue.shadeDefault),
     ];
 
     return [
       new charts.Series<LinearPolls, String>(
         id: 'Polls',
+        data: data,
+        colorFn: (LinearPolls sales, __) => sales.color,
         domainFn: (LinearPolls sales, _) => sales.legend,
         measureFn: (LinearPolls sales, _) => sales.votesNumber,
-        data: data,
         labelAccessorFn: (LinearPolls row, _) => '${row.votesNumber}%',
       )
     ];

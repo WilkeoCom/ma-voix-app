@@ -20,7 +20,7 @@ class ProjectsList extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: SizedBox(
-        height: 100,
+        height: 200,
         child: new ProjectsListItem(project: project),
       ),
     );
