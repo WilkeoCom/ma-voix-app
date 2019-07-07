@@ -14,7 +14,7 @@ description: Ma Voix Font-End project.
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.1.0 <3.0.0'
+  sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -26,6 +26,8 @@ dependencies:
   charts_flutter: ^0.6.0
   rxdart: ^0.21.0
   fluro: "^1.4.0"
+  validators: ^2.0.0
+  dio: ^2.1.6
 
 dev_dependencies:
   flutter_test:
