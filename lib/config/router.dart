@@ -5,12 +5,10 @@ class FluroRouter {
   static Router router = Router();
 
   static void setupRouter() {
-    /*
     router.define(
       'login',
       handler: loginHandler,
     );
-    */
     router.define(
       'home',
       handler: homeHandler,
