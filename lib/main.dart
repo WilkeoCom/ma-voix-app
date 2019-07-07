@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:ma_voix_app/config/router.dart';
-=======
-import 'package:ma_voix_app/bloc_helpers/blocProvider.dart';
-import 'package:ma_voix_app/counter/blocs/incrementBloc.dart';
-
-import 'pages/login.dart';
->>>>>>> feat(login): create login widget
 
 void main() {
   FluroRouter.setupRouter();
