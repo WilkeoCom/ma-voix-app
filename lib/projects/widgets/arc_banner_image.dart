@@ -8,6 +8,13 @@ class ArcBannerImage extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
 
+    return Image.asset(
+      imageUrl,
+      width: screenWidth,
+      height: 230.0,
+      fit: BoxFit.cover,
+    );
+
     return ClipPath(
       clipper: ArcClipper(),
       child: Image.asset(
