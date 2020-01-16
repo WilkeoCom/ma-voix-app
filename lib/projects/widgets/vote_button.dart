@@ -11,7 +11,7 @@ class VoteButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return RaisedButton(
       padding: const EdgeInsets.symmetric(vertical: 15),
-      color: backgroundColor.withOpacity(0.7),
+      color: backgroundColor.withOpacity(0.80),
       textColor: Colors.white,
       child: Icon(icon, color: Colors.white),
       shape: RoundedRectangleBorder(
