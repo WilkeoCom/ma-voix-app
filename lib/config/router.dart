@@ -10,6 +10,10 @@ class FluroRouter {
       handler: loginHandler,
     );
     router.define(
+      'register',
+      handler: registerHandler,
+    );
+    router.define(
       'home',
       handler: homeHandler,
     );
