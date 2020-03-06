@@ -72,7 +72,6 @@ class RegisterState extends State<Register> with ValidationMixin {
                         SizedBox(
                           height: 20.0,
                         ),
-                        phoneField(),
                         SizedBox(
                           height: 20.0,
                         ),
@@ -127,47 +126,6 @@ class RegisterState extends State<Register> with ValidationMixin {
                 color: Colors.white,
               ),
               hintText: 'Enter your Name',
-              hintStyle: hintTextStyle,
-            ),
-            validator: validateEmail,
-            onSaved: (String value) {
-              email = value;
-            },
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget phoneField() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          'Phone',
-          style: labelStyle,
-        ),
-        SizedBox(
-          height: 10.0,
-        ),
-        Container(
-          alignment: Alignment.centerLeft,
-          decoration: boxDecorationStyle,
-          height: 50.0,
-          child: TextFormField(
-            keyboardType: TextInputType.phone,
-            style: TextStyle(
-              color: Colors.white,
-              fontFamily: 'OpenSans',
-            ),
-            decoration: InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14.0),
-              prefixIcon: Icon(
-                Icons.phone,
-                color: Colors.white,
-              ),
-              hintText: 'Enter your Phone Number',
               hintStyle: hintTextStyle,
             ),
             validator: validateEmail,
