@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ma_voix_app/config/router.dart';
+import 'package:ma_voix_app/config/router.dart' as Router;
 
 void main() {
-  FluroRouter.setupRouter();
+  Router.Router.setupRouter();
   runApp(MyApp());
 }
 
@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: 'login',
-      onGenerateRoute: FluroRouter.router.generator,
+      initialRoute: 'home',
+      onGenerateRoute: Router.Router.router.generator,
     );
   }
 }

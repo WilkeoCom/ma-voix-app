@@ -1,8 +1,8 @@
 import 'package:fluro/fluro.dart';
 import 'package:ma_voix_app/config/route_handlers.dart';
 
-class FluroRouter {
-  static Router router = Router();
+class Router {
+  static FluroRouter router = FluroRouter();
 
   static void setupRouter() {
     router.define(
