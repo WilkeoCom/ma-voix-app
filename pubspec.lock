@@ -21,42 +21,67 @@ packages:
       name: async
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.4.0"
+    version: "2.5.0"
+  basic_utils:
+    dependency: transitive
+    description:
+      name: basic_utils
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.7.1"
   boolean_selector:
     dependency: transitive
     description:
       name: boolean_selector
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.5"
+    version: "2.1.0"
+  characters:
+    dependency: transitive
+    description:
+      name: characters
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.0"
   charcode:
     dependency: transitive
     description:
       name: charcode
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.2"
+    version: "1.2.0"
   charts_common:
     dependency: transitive
     description:
       name: charts_common
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.0"
+    version: "0.10.0"
   charts_flutter:
     dependency: "direct main"
     description:
       name: charts_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.0"
+    version: "0.10.0"
+  clock:
+    dependency: transitive
+    description:
+      name: clock
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.0"
   collection:
     dependency: transitive
     description:
       name: collection
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.14.11"
+=======
+    version: "1.15.0"
+>>>>>>> refactor: Upgrade to Flutter V2
   convert:
     dependency: transitive
     description:
@@ -64,12 +89,17 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
+<<<<<<< HEAD
   cookie_jar:
+=======
+  crypto:
+>>>>>>> refactor: Upgrade to Flutter V2
     dependency: transitive
     description:
-      name: cookie_jar
+      name: crypto
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.0.1"
   crypto:
     dependency: transitive
@@ -78,27 +108,49 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.3"
+=======
+    version: "2.1.5"
+>>>>>>> refactor: Upgrade to Flutter V2
   cupertino_icons:
     dependency: "direct main"
     description:
       name: cupertino_icons
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.1.3"
+=======
+    version: "1.0.2"
+>>>>>>> refactor: Upgrade to Flutter V2
   dio:
     dependency: "direct main"
     description:
       name: dio
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.2.2"
+=======
+    version: "3.0.10"
+  fake_async:
+    dependency: transitive
+    description:
+      name: fake_async
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.0"
+>>>>>>> refactor: Upgrade to Flutter V2
   fluro:
     dependency: "direct main"
     description:
       name: fluro
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.5.2"
+=======
+    version: "2.0.3"
+>>>>>>> refactor: Upgrade to Flutter V2
   flutter:
     dependency: "direct main"
     description: flutter
@@ -109,6 +161,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   image:
     dependency: transitive
     description:
@@ -116,13 +169,36 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.4"
+=======
+  http:
+    dependency: transitive
+    description:
+      name: http
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.12.2"
+  http_parser:
+    dependency: transitive
+    description:
+      name: http_parser
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.4"
+>>>>>>> refactor: Upgrade to Flutter V2
   intl:
     dependency: transitive
     description:
       name: intl
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.15.8"
+    version: "0.17.0"
+  json_annotation:
+    dependency: transitive
+    description:
+      name: json_annotation
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.1"
   logging:
     dependency: transitive
     description:
@@ -136,27 +212,40 @@ packages:
       name: matcher
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.12.6"
+=======
+    version: "0.12.10"
+>>>>>>> refactor: Upgrade to Flutter V2
   meta:
     dependency: transitive
     description:
       name: meta
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.1.8"
+=======
+    version: "1.3.0"
+>>>>>>> refactor: Upgrade to Flutter V2
   path:
     dependency: transitive
     description:
       name: path
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.6.4"
+=======
+    version: "1.8.0"
+>>>>>>> refactor: Upgrade to Flutter V2
   pedantic:
     dependency: transitive
     description:
       name: pedantic
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.8.0+1"
   petitparser:
     dependency: transitive
@@ -166,19 +255,34 @@ packages:
     source: hosted
     version: "2.4.0"
   quiver:
+=======
+    version: "1.11.0"
+  pointycastle:
     dependency: transitive
     description:
-      name: quiver
+      name: pointycastle
       url: "https://pub.dartlang.org"
     source: hosted
+    version: "2.0.1"
+  random_string:
+>>>>>>> refactor: Upgrade to Flutter V2
+    dependency: transitive
+    description:
+      name: random_string
+      url: "https://pub.dartlang.org"
+    source: hosted
+<<<<<<< HEAD
     version: "2.0.5"
+=======
+    version: "2.1.0"
+>>>>>>> refactor: Upgrade to Flutter V2
   rxdart:
     dependency: "direct main"
     description:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.21.0"
+    version: "0.26.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -190,62 +294,71 @@ packages:
       name: source_span
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.5.5"
+    version: "1.8.1"
   stack_trace:
     dependency: transitive
     description:
       name: stack_trace
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.9.3"
+    version: "1.10.0"
   stream_channel:
     dependency: transitive
     description:
       name: stream_channel
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0"
+    version: "2.1.0"
   string_scanner:
     dependency: transitive
     description:
       name: string_scanner
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.0.5"
+=======
+    version: "1.1.0"
+>>>>>>> refactor: Upgrade to Flutter V2
   term_glyph:
     dependency: transitive
     description:
       name: term_glyph
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.0"
+    version: "1.2.0"
   test_api:
     dependency: transitive
     description:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.2.11"
+=======
+    version: "0.2.19"
+>>>>>>> refactor: Upgrade to Flutter V2
   typed_data:
     dependency: transitive
     description:
       name: typed_data
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.6"
+    version: "1.3.0"
   validators:
     dependency: "direct main"
     description:
       name: validators
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0+1"
+    version: "2.0.1"
   vector_math:
     dependency: transitive
     description:
       name: vector_math
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.0.8"
   xml:
     dependency: transitive
@@ -257,3 +370,16 @@ packages:
 sdks:
   dart: ">=2.4.0 <3.0.0"
   flutter: ">=1.5.0 <1.13.0"
+=======
+    version: "2.1.0"
+  vin_decoder:
+    dependency: transitive
+    description:
+      name: vin_decoder
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.3"
+sdks:
+  dart: ">=2.12.0-0.0 <3.0.0"
+  flutter: ">=1.17.0"
+>>>>>>> refactor: Upgrade to Flutter V2
