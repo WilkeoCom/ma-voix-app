@@ -1,7 +1,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ma_voix_app/config/router.dart';
+import 'package:ma_voix_app/config/router.dart' as Router;
 import 'package:ma_voix_app/projects/models/project.dart';
 import 'package:ma_voix_app/projects/widgets/chart.dart';
 import 'package:ma_voix_app/projects/widgets/project_resume.dart';
@@ -16,7 +16,7 @@ class ProjectsListItem extends StatelessWidget {
   final Project project;
 
   void handleTap(context) =>
-      FluroRouter.router.navigateTo(context, 'project/${project.id}',
+      Router.Router.router.navigateTo(context, 'project/${project.id}',
           transition: TransitionType.inFromRight);
 
   @override
