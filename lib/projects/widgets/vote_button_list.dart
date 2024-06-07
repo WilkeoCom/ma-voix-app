@@ -2,23 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:ma_voix_app/projects/widgets/vote_button.dart';
 
 class VoteButtonList extends StatelessWidget {
-  const VoteButtonList({Key key}) : super(key: key);
+  const VoteButtonList({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var forButton = Expanded(
+    var forButton = const Expanded(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10),
-        child: new VoteButton(
+        child: VoteButton(
           icon: Icons.thumb_up,
           backgroundColor: Colors.blue,
         ),
       ),
     );
-    var againstButton = Expanded(
+    var againstButton = const Expanded(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10),
-        child: new VoteButton(
+        child: VoteButton(
           icon: Icons.thumb_down,
           backgroundColor: Colors.red,
         ),
