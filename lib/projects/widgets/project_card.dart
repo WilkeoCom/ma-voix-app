@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 // import 'package:ma_voix_app/config/router.dart' as Router;
 import 'package:ma_voix_app/projects/models/project.dart';
 import 'package:ma_voix_app/projects/widgets/project_resume.dart';
-import 'package:ma_voix_app/projects/widgets/vote_button_list.dart';
+import 'package:ma_voix_app/projects/widgets/vote_buttons.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({super.key, required this.project});
@@ -53,11 +53,6 @@ class ProjectCard extends StatelessWidget {
       ),
     );
 
-    var voteButtons = const Expanded(
-      //flex: 1,
-      child: VoteButtonList(),
-    );
-
     return Card(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,13 +61,10 @@ class ProjectCard extends StatelessWidget {
             padding: const EdgeInsets.all(15),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                projectInfoLine,
-                //voteButtons,
-              ],
+              children: <Widget>[projectInfoLine],
             ),
           ),
-          //voteButtons,
+          VoteButtons(votes: project.votes),
         ],
       ),
     );

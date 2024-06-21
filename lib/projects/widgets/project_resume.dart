@@ -7,27 +7,21 @@ class ProjectResume extends StatelessWidget {
 
   final Project project;
 
-  Widget getTitle() {
+  Widget getTitle(BuildContext context) {
     return Text(
       project.title,
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
-      style: const TextStyle(
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-      ),
+      style: Theme.of(context).textTheme.titleLarge,
     );
   }
 
-  Widget getSubTitle() {
-    return const Text(
+  Widget getSubTitle(BuildContext context) {
+    return Text(
       'subtitle',
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
-      style: TextStyle(
-        fontSize: 12.0,
-        color: Colors.black54,
-      ),
+      style: Theme.of(context).textTheme.bodySmall,
     );
   }
 
@@ -43,9 +37,9 @@ class ProjectResume extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        getTitle(),
+        getTitle(context),
         const Padding(padding: EdgeInsets.only(bottom: 2.0)),
-        getSubTitle(),
+        getSubTitle(context),
         getFooter(),
       ],
     );

@@ -8,30 +8,35 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  ThemeData getThemeData() {
+    return ThemeData(
+      useMaterial3: true,
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: Colors.white,
+        primary: const Color.fromARGB(255, 4, 32, 93),
+        secondary: const Color.fromARGB(255, 234, 93, 23),
+        surface: Colors.white,
+        surfaceTint: Colors.white,
+      ),
+      textTheme: const TextTheme(
+        headlineSmall:
+            TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        titleLarge: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Color.fromARGB(255, 4, 32, 93)),
+        bodySmall: TextStyle(color: Color.fromARGB(255, 147, 147, 147)),
+      ),
+      scaffoldBackgroundColor: const Color.fromARGB(255, 242, 243, 246),
+    );
+  }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-      ),
+      title: 'Ma Voix',
+      theme: getThemeData(),
       home: const HomeView(),
     );
   }
