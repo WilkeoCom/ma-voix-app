@@ -85,17 +85,6 @@ class _ConfirmationViewState extends State<ConfirmationView>
                 ),
               ],
             ),
-            /*
-            child: Lottie.asset(
-              "assets/images/check.json",
-              controller: _controller,
-              onLoaded: (composition) {
-                _controller
-                  ..duration = composition.duration
-                  ..forward();
-              },
-            ),
-            */
           ),
         ),
       ),

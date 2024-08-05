@@ -19,8 +19,7 @@ class VoteButton extends StatefulWidget {
 }
 
 class _VoteButton extends State<VoteButton> {
-  bool isVisible = true;
-
+  /*
   Route _createRoute() {
     return PageRouteBuilder(
       pageBuilder: (context, animation, secondaryAnimation) =>
@@ -40,34 +39,20 @@ class _VoteButton extends State<VoteButton> {
         );
       },
     );
-  }
+  } */
 
-  _goToConfirmationView(
-      BuildContext context, String uniqueKey, Color backgroundColor) async {
-    // return Navigator.of(context).push(_createRoute());
-    return Navigator.of(context).push(MaterialPageRoute<void>(
+  Route _createRoute(String uniqueKey, Color backgroundColor) {
+    return MaterialPageRoute<void>(
       builder: (BuildContext context) => ConfirmationView(
         uniqueKey: uniqueKey,
         backgroundColor: backgroundColor,
       ),
-      /* Scaffold(
-        // appBar: AppBar(title: const Text('Second Page'),),
-        body: Center(
-          child: Hero(
-            tag: uniqueKey,
-            createRectTween: (Rect? begin, Rect? end) {
-              return MaterialRectCenterArcTween(begin: begin, end: end);
-            },
-            child: BoxWidget(
-              size: Size(MediaQuery.of(context).size.width,
-                  MediaQuery.of(context).size.height),
-              color: backgroundColor,
-            ),
-          ),
-        ),
-      ),
-      */
-    ));
+    );
+  }
+
+  _goToConfirmationView(
+      BuildContext context, String uniqueKey, Color backgroundColor) async {
+    return Navigator.of(context).push(_createRoute(uniqueKey, backgroundColor));
   }
 
   @override
@@ -87,20 +72,18 @@ class _VoteButton extends State<VoteButton> {
           return MaterialRectCenterArcTween(begin: begin, end: end);
         },
         child: ElevatedButton.icon(
-            style: style,
-            onPressed: () {
-              _goToConfirmationView(context, uniqueKey, widget.backgroundColor);
-            },
-            label: Text(
-              isVisible ? widget.text : '',
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyLarge!
-                  .copyWith(color: widget.color),
-            ),
-            icon: Visibility(
-              visible: isVisible,
-              child: Icon(widget.icon, color: widget.color),
-            )));
+          style: style,
+          onPressed: () {
+            _goToConfirmationView(context, uniqueKey, widget.backgroundColor);
+          },
+          label: Text(
+            widget.text,
+            style: Theme.of(context)
+                .textTheme
+                .bodyLarge!
+                .copyWith(color: widget.color),
+          ),
+          icon: Icon(widget.icon, color: widget.color),
+        ));
   }
 }
