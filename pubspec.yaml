@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   syncfusion_flutter_gauges: ^25.2.4
   flutter_svg: ^2.0.10+1
+  lottie: ^3.1.2
+  page_transition: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +64,7 @@ flutter:
   assets:
     - assets/images/aircraft.svg
     - assets/images/education.svg
+    - assets/images/check.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
