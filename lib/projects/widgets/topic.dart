@@ -7,28 +7,32 @@ class Topic extends StatelessWidget {
   final String image;
 
   static const Map<String, IconData> iconsMap = {
-    'theater_comedy': Icons.theater_comedy,
     'emoji_transportation': Icons.emoji_transportation,
+    'family_restroom': Icons.family_restroom,
+    'theater_comedy': Icons.theater_comedy,
   };
 
   @override
   Widget build(BuildContext context) {
     Text topicLabel = Text(
       topic,
-      style: const TextStyle(
+      style: TextStyle(
         fontSize: 12.0,
-        color: Colors.black87,
+        color: Theme.of(context).primaryColor,
       ),
     );
     Icon topicIcon = Icon(
       iconsMap[image],
-      color: Colors.black87,
+      color: Theme.of(context).primaryColor,
       size: 15.0,
     );
 
     return Chip(
       avatar: topicIcon,
       label: topicLabel,
+      side: BorderSide(
+        color: Theme.of(context).primaryColor,
+      ),
     );
   }
 }

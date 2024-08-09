@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ma_voix_app/projects/models/project.dart';
 import 'package:ma_voix_app/projects/widgets/topic.dart';
 
-class ProjectResume extends StatelessWidget {
-  const ProjectResume({super.key, required this.project});
+class ProjectSmallResume extends StatelessWidget {
+  const ProjectSmallResume({super.key, required this.project});
 
   final Project project;
 
@@ -12,7 +12,7 @@ class ProjectResume extends StatelessWidget {
       project.title,
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
-      style: Theme.of(context).textTheme.headlineSmall,
+      style: Theme.of(context).textTheme.titleLarge,
     );
   }
 
@@ -21,9 +21,7 @@ class ProjectResume extends StatelessWidget {
       'subtitle',
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
-      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-            color: const Color.fromARGB(255, 147, 147, 147),
-          ),
+      style: Theme.of(context).textTheme.bodySmall,
     );
   }
 

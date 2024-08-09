@@ -19,15 +19,17 @@ class MyApp extends StatelessWidget {
         surfaceTint: Colors.white,
       ),
       textTheme: const TextTheme(
-        headlineSmall:
-            TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        headlineSmall: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+            color: Color.fromARGB(255, 4, 32, 93)),
         titleLarge: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: Color.fromARGB(255, 4, 32, 93)),
         bodySmall: TextStyle(color: Color.fromARGB(255, 147, 147, 147)),
       ),
-      scaffoldBackgroundColor: const Color.fromARGB(255, 242, 243, 246),
+      scaffoldBackgroundColor: const Color.fromARGB(255, 4, 32, 93),
     );
   }
 

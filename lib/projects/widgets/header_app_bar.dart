@@ -11,7 +11,10 @@ class HeaderAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Text('Les votes en cours',
-          style: Theme.of(context).textTheme.headlineSmall),
+          style: Theme.of(context)
+              .textTheme
+              .headlineSmall!
+              .copyWith(color: Colors.white)),
       toolbarHeight: 75,
       backgroundColor: Theme.of(context).primaryColor,
       flexibleSpace: Container(
