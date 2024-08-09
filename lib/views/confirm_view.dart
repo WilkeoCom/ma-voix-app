@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:ma_voix_app/design_system/widgets/box_widget.dart';
@@ -16,11 +17,22 @@ class ConfirmationView extends StatefulWidget {
 class _ConfirmationViewState extends State<ConfirmationView>
     with TickerProviderStateMixin {
   late final AnimationController _controller;
+  bool _isContentVisible = false;
 
   @override
   void initState() {
     super.initState();
     _controller = AnimationController(vsync: this);
+    _controller.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        _controller.repeat();
+      }
+    });
+    Future.delayed(const Duration(milliseconds: 100), () {
+      setState(() {
+        _isContentVisible = true;
+      });
+    });
   }
 
   @override
@@ -29,27 +41,51 @@ class _ConfirmationViewState extends State<ConfirmationView>
     super.dispose();
   }
 
-  Widget getCloseButton() {
+  Widget getCloseButton(Color? color) {
     return IconButton(
         icon: const Icon(Icons.close),
-        color: Colors.white,
+        color: color,
         tooltip: "Close",
         onPressed: () => Navigator.pop(context));
   }
 
-  Widget getCloseBar() {
+  Widget getCloseBar(Color color) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 24.0, 0, 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [getCloseButton()],
+        children: [getCloseButton(color)],
       ),
+    );
+  }
+
+  Widget getCongratsText(Color color) {
+    return Text(
+      "Merci pour votre vote,\n bravo !",
+      style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: color),
+      textAlign: TextAlign.center,
+    );
+  }
+
+  Widget getAnimatedImage() {
+    return Lottie.asset(
+      "assets/images/clap.json",
+      controller: _controller,
+      onLoaded: (composition) {
+        _controller
+          ..duration = composition.duration
+          ..forward();
+      },
     );
   }
 
   @override
   Widget build(BuildContext context) {
+    Color color = widget.backgroundColor == Colors.white
+        ? Theme.of(context).primaryColor
+        : Colors.white;
+
     return Scaffold(
       /*
       appBar: AppBar(
@@ -69,18 +105,19 @@ class _ConfirmationViewState extends State<ConfirmationView>
             child: Column(
               children: [
                 Flexible(
-                  child: getCloseBar(),
+                  child: getCloseBar(color),
                 ),
-                Expanded(
-                  flex: 2,
-                  child: Lottie.asset(
-                    "assets/images/check.json",
-                    controller: _controller,
-                    onLoaded: (composition) {
-                      _controller
-                        ..duration = composition.duration
-                        ..forward();
-                    },
+                Visibility(
+                  visible: _isContentVisible,
+                  child: Expanded(
+                    flex: 9,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        getCongratsText(color),
+                        getAnimatedImage(),
+                      ],
+                    ),
                   ),
                 ),
               ],
