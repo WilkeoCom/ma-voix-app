@@ -14,7 +14,7 @@ class Body extends StatelessWidget {
       ),
       child: Container(
         padding: const EdgeInsets.only(top: 13, bottom: 13),
-        color: const Color.fromARGB(255, 242, 243, 246),
+        color: Theme.of(context).colorScheme.tertiary,
         child: child,
       ),
     );

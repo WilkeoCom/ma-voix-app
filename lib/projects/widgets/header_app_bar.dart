@@ -21,6 +21,7 @@ class HeaderAppBar extends StatelessWidget implements PreferredSizeWidget {
         alignment: Alignment.topLeft,
         child: const Circle(radius: 60),
       ),
+      automaticallyImplyLeading: false,
     );
   }
 }
