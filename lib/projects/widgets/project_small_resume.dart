@@ -21,7 +21,10 @@ class ProjectSmallResume extends StatelessWidget {
       'subtitle',
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
-      style: Theme.of(context).textTheme.bodySmall,
+      style: Theme.of(context)
+          .textTheme
+          .bodySmall!
+          .copyWith(color: const Color.fromARGB(255, 147, 147, 147)),
     );
   }
 

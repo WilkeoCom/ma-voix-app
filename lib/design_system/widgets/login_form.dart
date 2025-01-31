@@ -6,7 +6,6 @@ class LoginForm extends StatefulWidget {
   final void Function(
     String email,
     String password,
-    String userName,
     bool isLogin,
     BuildContext ctx,
   ) submitFn;
@@ -22,7 +21,6 @@ class _LoginFormState extends State<LoginForm> {
   final _formKey = GlobalKey<FormState>();
   var _isLogin = true;
   var _userEmail = '';
-  var _userName = '';
   var _userPassword = '';
 
   void _trySubmit() {
@@ -31,8 +29,8 @@ class _LoginFormState extends State<LoginForm> {
 
     if (isValid) {
       _formKey.currentState!.save();
-      widget.submitFn(_userEmail.trim(), _userPassword.trim(), _userName.trim(),
-          _isLogin, context);
+      widget.submitFn(
+          _userEmail.trim(), _userPassword.trim(), _isLogin, context);
     }
   }
 
@@ -124,34 +122,6 @@ class _LoginFormState extends State<LoginForm> {
                               _userEmail = value!;
                             },
                           ),
-                          if (!_isLogin) const SizedBox(height: 20.0),
-                          if (!_isLogin)
-                            TextFormField(
-                              key: const ValueKey('username'),
-                              decoration: const InputDecoration(
-                                  labelText: 'USERNAME',
-                                  labelStyle: TextStyle(
-                                      fontFamily: 'RobotoCondensed',
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.grey),
-                                  focusedBorder: UnderlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: Colors.green))),
-                              autocorrect: true,
-                              textCapitalization: TextCapitalization.words,
-                              enableSuggestions: false,
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return 'Please enter a username';
-                                }
-
-                                return null;
-                              },
-                              onSaved: (value) {
-                                _userName = value!;
-                              },
-                              // ignore: missing_return
-                            ),
                           const SizedBox(height: 20.0),
                           TextFormField(
                             key: const ValueKey('password'),

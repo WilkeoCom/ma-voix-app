@@ -13,7 +13,9 @@ class Body extends StatelessWidget {
         topRight: Radius.circular(25),
       ),
       child: Container(
-        padding: const EdgeInsets.only(top: 13, bottom: 13),
+        padding: const EdgeInsets.only(top: 13),
+        width: double.infinity,
+        height: double.infinity,
         color: Theme.of(context).colorScheme.tertiary,
         child: child,
       ),

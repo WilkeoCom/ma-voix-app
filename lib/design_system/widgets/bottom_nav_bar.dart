@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ma_voix_app/auth/services/authentication_service.dart';
 import 'package:ma_voix_app/services/router.dart';
 
 class BottomNavBar extends StatelessWidget {
@@ -12,7 +13,9 @@ class BottomNavBar extends StatelessWidget {
         Navigator.pushNamed(context, homePath);
         break;
       case 1:
-        Navigator.pushNamed(context, loginPath);
+        AuthenticationService.isUserConnected()
+            ? Navigator.pushNamed(context, profilePath)
+            : Navigator.pushNamed(context, loginPath);
         break;
     }
   }
@@ -35,50 +38,53 @@ class BottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: const BorderRadius.only(
-        topLeft: Radius.circular(25),
-        topRight: Radius.circular(25),
-      ),
-      child: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: _getNavigationBarIcon(
-              context,
-              Icons.home_outlined,
-              Theme.of(context).colorScheme.primary,
-              false,
+    return Container(
+      decoration: BoxDecoration(color: Theme.of(context).colorScheme.tertiary),
+      child: ClipRRect(
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(25),
+          topRight: Radius.circular(25),
+        ),
+        child: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: _getNavigationBarIcon(
+                context,
+                Icons.home_outlined,
+                Theme.of(context).colorScheme.primary,
+                false,
+              ),
+              activeIcon: _getNavigationBarIcon(
+                context,
+                Icons.home_outlined,
+                Colors.white,
+                true,
+              ),
+              label: 'Accueil',
             ),
-            activeIcon: _getNavigationBarIcon(
-              context,
-              Icons.home_outlined,
-              Colors.white,
-              true,
+            BottomNavigationBarItem(
+              icon: _getNavigationBarIcon(
+                context,
+                Icons.account_circle_outlined,
+                Theme.of(context).colorScheme.primary,
+                false,
+              ),
+              activeIcon: _getNavigationBarIcon(
+                context,
+                Icons.account_circle_outlined,
+                Colors.white,
+                true,
+              ),
+              label: 'Compte',
             ),
-            label: 'Accueil',
-          ),
-          BottomNavigationBarItem(
-            icon: _getNavigationBarIcon(
-              context,
-              Icons.account_circle_outlined,
-              Theme.of(context).colorScheme.primary,
-              false,
-            ),
-            activeIcon: _getNavigationBarIcon(
-              context,
-              Icons.account_circle_outlined,
-              Colors.white,
-              true,
-            ),
-            label: 'Compte',
-          ),
-        ],
-        showUnselectedLabels: false,
-        showSelectedLabels: false,
-        backgroundColor: Theme.of(context).colorScheme.surface,
-        selectedItemColor: Theme.of(context).colorScheme.secondary,
-        currentIndex: currentRoute,
-        onTap: (int index) => _onSelectTab(context, index),
+          ],
+          showUnselectedLabels: false,
+          showSelectedLabels: false,
+          backgroundColor: Theme.of(context).colorScheme.surface,
+          selectedItemColor: Theme.of(context).colorScheme.secondary,
+          currentIndex: currentRoute,
+          onTap: (int index) => _onSelectTab(context, index),
+        ),
       ),
     );
   }

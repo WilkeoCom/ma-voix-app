@@ -1,5 +1,7 @@
+// home
+const homePath = '/';
+
 // on boarding
 const loginPath = '/login';
 
-// home
-const homePath = '/';
+const profilePath = '/profile';

@@ -54,6 +54,7 @@ class ProjectSmallCard extends StatelessWidget {
     );
 
     return Card(
+      color: Theme.of(context).colorScheme.surface,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[

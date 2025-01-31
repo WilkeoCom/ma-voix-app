@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ma_voix_app/views/confirm_view.dart';
+import 'package:ma_voix_app/projects/screens/confirm_screen.dart';
 
 class VoteButton extends StatefulWidget {
   const VoteButton(
