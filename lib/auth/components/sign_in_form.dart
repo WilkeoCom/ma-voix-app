@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ma_voix_app/services/router.dart';
+import 'package:ma_voix_app/routes/app_routes.dart';
 
 import '../services/authentication_service.dart';
 import '../validators.dart';
@@ -68,7 +68,7 @@ class _SignInFormState extends State<SignInForm> {
               return;
             }
 
-            Navigator.popAndPushNamed(context, homePath);
+            Navigator.popAndPushNamed(context, AppRoutes.home);
           }
         },
       ),

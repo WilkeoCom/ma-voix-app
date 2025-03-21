@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ma_voix_app/auth/services/authentication_service.dart';
-import 'package:ma_voix_app/services/router.dart';
+import 'package:ma_voix_app/routes/app_routes.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({super.key, required this.currentRoute});
@@ -10,12 +10,12 @@ class BottomNavBar extends StatelessWidget {
   void _onSelectTab(BuildContext context, int index) {
     switch (index) {
       case 0:
-        Navigator.pushNamed(context, homePath);
+        Navigator.pushNamed(context, AppRoutes.home);
         break;
       case 1:
         AuthenticationService.isUserConnected()
-            ? Navigator.pushNamed(context, profilePath)
-            : Navigator.pushNamed(context, loginPath);
+            ? Navigator.pushNamed(context, AppRoutes.profile)
+            : Navigator.pushNamed(context, AppRoutes.login);
         break;
     }
   }

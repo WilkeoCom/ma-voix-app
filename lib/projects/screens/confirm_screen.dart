@@ -87,10 +87,6 @@ class _ConfirmationViewState extends State<ConfirmationView>
         : Colors.white;
 
     return Scaffold(
-      /*
-      appBar: AppBar(
-        actions: [CloseButton()],
-      ),*/
       backgroundColor: Colors.transparent,
       body: Center(
         child: Hero(

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ma_voix_app/design_system/components/buttons/social_button.dart';
 import 'package:ma_voix_app/design_system/widgets/body.dart';
-import 'package:ma_voix_app/projects/widgets/header_app_bar.dart';
+import 'package:ma_voix_app/design_system/widgets/header_app_bar.dart';
+import 'package:ma_voix_app/routes/app_routes.dart';
 
 import '../components/sign_up_form.dart';
 import '../components/welcome_text.dart';
@@ -54,12 +55,8 @@ class SignUpScreen extends StatelessWidget {
                           style: TextStyle(
                               color: Theme.of(context).colorScheme.secondary),
                           recognizer: TapGestureRecognizer()
-                            ..onTap = () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const LoginScreen(),
-                                  ),
-                                ),
+                            ..onTap = () =>
+                                Navigator.pushNamed(context, AppRoutes.login),
                         ),
                       ],
                     ),

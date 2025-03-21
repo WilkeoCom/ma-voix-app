@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:ma_voix_app/projects/screens/confirm_screen.dart';
 
 class VoteButton extends StatefulWidget {
   const VoteButton(
       {super.key,
+      required this.onPressed,
       required this.icon,
       required this.backgroundColor,
       this.text = '',
       this.color = Colors.white});
 
+  /// Called when the button is tapped or otherwise activated.
+  ///
+  /// If this callback and [onLongPress] are null, then the button will be disabled.
+  final void Function(String) onPressed;
   final Color backgroundColor;
   final IconData icon;
   final String text;
@@ -41,20 +45,6 @@ class _VoteButton extends State<VoteButton> {
     );
   } */
 
-  Route _createRoute(String uniqueKey, Color backgroundColor) {
-    return MaterialPageRoute<void>(
-      builder: (BuildContext context) => ConfirmationView(
-        uniqueKey: uniqueKey,
-        backgroundColor: backgroundColor,
-      ),
-    );
-  }
-
-  _goToConfirmationView(
-      BuildContext context, String uniqueKey, Color backgroundColor) async {
-    return Navigator.of(context).push(_createRoute(uniqueKey, backgroundColor));
-  }
-
   @override
   Widget build(BuildContext context) {
     final ButtonStyle style = ElevatedButton.styleFrom(
@@ -67,23 +57,22 @@ class _VoteButton extends State<VoteButton> {
     String uniqueKey = UniqueKey().toString();
 
     return Hero(
-        tag: uniqueKey,
-        createRectTween: (Rect? begin, Rect? end) {
-          return MaterialRectCenterArcTween(begin: begin, end: end);
-        },
-        child: ElevatedButton.icon(
-          style: style,
-          onPressed: () {
-            _goToConfirmationView(context, uniqueKey, widget.backgroundColor);
-          },
-          label: Text(
-            widget.text,
-            style: Theme.of(context)
-                .textTheme
-                .bodyLarge!
-                .copyWith(color: widget.color),
-          ),
-          icon: Icon(widget.icon, color: widget.color),
-        ));
+      tag: uniqueKey,
+      createRectTween: (Rect? begin, Rect? end) {
+        return MaterialRectCenterArcTween(begin: begin, end: end);
+      },
+      child: ElevatedButton.icon(
+        style: style,
+        onPressed: () => widget.onPressed(uniqueKey),
+        label: Text(
+          widget.text,
+          style: Theme.of(context)
+              .textTheme
+              .bodyLarge!
+              .copyWith(color: widget.color),
+        ),
+        icon: Icon(widget.icon, color: widget.color),
+      ),
+    );
   }
 }

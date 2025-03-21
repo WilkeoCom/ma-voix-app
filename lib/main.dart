@@ -1,10 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:ma_voix_app/auth/screens/login_screen.dart';
 import 'package:ma_voix_app/firebase_options.dart';
-import 'package:ma_voix_app/services/router.dart';
-import 'package:ma_voix_app/screens/home_screen.dart';
-import 'package:ma_voix_app/auth/screens/profile_screen.dart';
+
+import 'routes/app_routes.dart';
+import 'routes/routes.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -91,12 +90,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Ma Voix',
       theme: getThemeData(),
-      initialRoute: homePath,
-      routes: {
-        homePath: (context) => const HomeView(),
-        loginPath: (context) => const LoginScreen(),
-        profilePath: (context) => ProfileScreen(),
-      },
+      onGenerateRoute: Routes.onGenerateRoutes,
+      initialRoute: AppRoutes.home,
     );
   }
 }

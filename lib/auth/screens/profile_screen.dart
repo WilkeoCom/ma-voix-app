@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:ma_voix_app/design_system/widgets/body.dart';
 import 'package:ma_voix_app/design_system/widgets/bottom_nav_bar.dart';
-import 'package:ma_voix_app/projects/widgets/header_app_bar.dart';
+import 'package:ma_voix_app/design_system/widgets/header_app_bar.dart';
 import 'package:ma_voix_app/auth/services/authentication_service.dart';
 import 'package:ma_voix_app/screens/home_screen.dart';
 
