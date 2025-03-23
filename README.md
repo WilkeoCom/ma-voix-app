@@ -7,7 +7,7 @@
 
 </div>
 
-Ma Voix is a free mobile application for participatory and citizen democracy, designed to get the general public more involved in voting on legislation at the National Assembly and the Senate.
+**Ma Voix** is a free mobile application for **participatory and citizen democracy**, designed to get the general public more involved in voting on legislation at the **National Assembly and the Senate**.
 **Ma Voix** is an application developed in **[Flutter](https://flutter.dev/)**.
 
 ### Screenshots
