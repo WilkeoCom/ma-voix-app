@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![](/android/app/src/main/res/mipmap-hdpi/ic_launcher.png)
+![](/android/app/src/main/res/mipmap-hdpi/ic_launcher.png)<br/>
 Ma Voix - Democracy App
 
 </div>
