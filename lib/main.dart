@@ -92,6 +92,7 @@ class MyApp extends StatelessWidget {
       theme: getThemeData(),
       onGenerateRoute: Routes.onGenerateRoutes,
       initialRoute: AppRoutes.home,
+      debugShowCheckedModeBanner: false,
     );
   }
 }

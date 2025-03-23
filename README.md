@@ -1,16 +1,19 @@
-# ma_voix_app
+## Ma Voix App
 
-Ma Voix App project.
+<div align="center">
 
-## Getting Started
+![](/android/app/src/main/res/mipmap-hdpi/ic_launcher.png)
+Ma Voix - Democracy App
 
-This project is a starting point for a Flutter application.
+</div>
 
-A few resources to get you started if this is your first Flutter project:
+Ma Voix is a free mobile application for participatory and citizen democracy, designed to get the general public more involved in voting on legislation at the National Assembly and the Senate.
+Ma Voix App is an application developed in Flutter.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![](/preview.png)
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
